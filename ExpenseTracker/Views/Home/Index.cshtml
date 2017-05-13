@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form id="insert_expense_form">
+    <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <legend>Category</legend>
+            <label for="category_ddl">Select Payment Type</label>
+            <select name="category_ddl" id="category_ddl">
+                <option value="Gas">Gas</option>
+                <option value="Food">Food</option>
+                <option value="Online_Shopping">Online Shopping</option>
+                <option value="Bill_Pay">Bill Pay</option>
+                <option value="Misc">Misc</option>
+            </select>
+        </fieldset>
+
+        <fieldset data-role="controlgroup">
+            <legend>Payment Type:</legend>
+            <label for="payment_type_ddl">Select Payment Type</label>
+            <select name="payment_type_ddl" id="payment_type_ddl">
+                <option value="AE">American Express</option>
+                <option value="DSCVR">Discover</option>
+                <option value="CHASEVISA">Chase VISA</option>
+            </select>
+        </fieldset>
+
+        <label for="amount">Amount </label>
+        <input type="number" data-clear-btn="false" name="amount" id="amount" value="">
+
+        <label for="notes">Notes:</label>
+        <textarea name="notes" id="notes"></textarea>
+
+        <label for="datetime">Datetime:</label>
+        <input type="datetime" data-clear-btn="true" name="datetime" id="datetime" value="@DateTime.Now">
+
+        <label for="upload_receipt">Upload Receipt</label>
+        @*<input type="file" data-clear-btn="false" name="upload_receipt" id="upload_receipt" value="">*@
+        <input type="file" id="myCamera" name="myCamera" accept="image/*;capture=camera" />
+    </div>
+    <div data-role="fieldcontain">
+        <div class="ui-input-btn ui-btn ui-corner-all ui-shadow">
+            Submit
+            <input type="button" data-enhanced="true" value="SUBMIT">
+        </div>
+    </div>
+</form>

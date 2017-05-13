@@ -1,0 +1,9 @@
+c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTracker\bin\Debug\netcoreapp1.1\ExpenseTracker.deps.json
+c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTracker\bin\Debug\netcoreapp1.1\ExpenseTracker.runtimeconfig.json
+c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTracker\bin\Debug\netcoreapp1.1\ExpenseTracker.runtimeconfig.dev.json
+c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTracker\bin\Debug\netcoreapp1.1\ExpenseTracker.dll
+c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTracker\bin\Debug\netcoreapp1.1\ExpenseTracker.pdb
+c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp1.1\ExpenseTracker.csprojResolveAssemblyReference.cache
+c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp1.1\ExpenseTracker.AssemblyInfo.cs
+c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp1.1\ExpenseTracker.dll
+c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp1.1\ExpenseTracker.pdb
