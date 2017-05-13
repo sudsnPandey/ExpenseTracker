@@ -1,13 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<legend id="current_expense_info"></legend>
 <form id="insert_expense_form">
     <div data-role="fieldcontain">
         <fieldset data-role="controlgroup">
             <legend>Category</legend>
-            <label for="category_ddl">Select Payment Type</label>
-            <select name="category_ddl" id="category_ddl">
+            <label for="Category">Select Payment Type</label>
+            <select name="Category" id="Category">
                 <option value="Gas">Gas</option>
                 <option value="Food">Food</option>
                 <option value="Online_Shopping">Online Shopping</option>
@@ -18,31 +18,35 @@
 
         <fieldset data-role="controlgroup">
             <legend>Payment Type:</legend>
-            <label for="payment_type_ddl">Select Payment Type</label>
-            <select name="payment_type_ddl" id="payment_type_ddl">
+            <label for="PaymentType">Select Payment Type</label>
+            <select name="PaymentType" id="PaymentType">
                 <option value="AE">American Express</option>
                 <option value="DSCVR">Discover</option>
                 <option value="CHASEVISA">Chase VISA</option>
             </select>
         </fieldset>
 
-        <label for="amount">Amount </label>
-        <input type="number" data-clear-btn="false" name="amount" id="amount" value="">
+        <label for="Amount">Amount </label>
+        <input type="number" data-clear-btn="false" name="Amount" id="Amount" value="">
 
-        <label for="notes">Notes:</label>
-        <textarea name="notes" id="notes"></textarea>
+        <label for="Notes">Notes:</label>
+        <textarea name="Notes" id="Notes"></textarea>
 
-        <label for="datetime">Datetime:</label>
-        <input type="datetime" data-clear-btn="true" name="datetime" id="datetime" value="@DateTime.Now">
+        <label for="EntryDate">Datetime:</label>
+        <input type="datetime" data-clear-btn="true" name="EntryDate" id="EntryDate" value="@DateTime.Now">
 
-        <label for="upload_receipt">Upload Receipt</label>
+        <label for="Receipt_PIC">Upload Receipt</label>
         @*<input type="file" data-clear-btn="false" name="upload_receipt" id="upload_receipt" value="">*@
-        <input type="file" id="myCamera" name="myCamera" accept="image/*;capture=camera" />
+        <input type="file" id="file_upload" name="file_upload" accept="image/*;capture=camera" onchange="getReceiptPic();"/>
+        <input type="hidden" id="Receipt_PIC" name="Receipt_PIC" value=""/>
     </div>
     <div data-role="fieldcontain">
         <div class="ui-input-btn ui-btn ui-corner-all ui-shadow">
             Submit
-            <input type="button" data-enhanced="true" value="SUBMIT">
+            <input type="button" data-enhanced="true" value="SUBMIT" onclick="submit_insert_expense();">
         </div>
     </div>
 </form>
+@section Scripts{
+<script src="~/Scripts/index.js"></script>
+}

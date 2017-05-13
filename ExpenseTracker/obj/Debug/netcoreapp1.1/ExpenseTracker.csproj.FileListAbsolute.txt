@@ -7,3 +7,5 @@ c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTra
 c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp1.1\ExpenseTracker.AssemblyInfo.cs
 c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp1.1\ExpenseTracker.dll
 c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp1.1\ExpenseTracker.pdb
+c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp1.1\ExpenseTracker.Properties.Resources.resources
+c:\users\sudsnnn\documents\visual studio 2017\Projects\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp1.1\ExpenseTracker.csproj.GenerateResource.Cache
