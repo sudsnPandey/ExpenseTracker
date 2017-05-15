@@ -3,55 +3,69 @@
 }
 <style>
     .ui-content {
-        padding-top:0em;
+        padding-top: 0em;
+    }
+
+    .ui-mobile label, .ui-controlgroup-label {
+        margin-bottom: 0em;
+    }
+
+    .ui-field-contain, .ui-mobile fieldset.ui-field-contain {
+        padding-top: 0em;
     }
 </style>
-<label id="current_expense_info"><strong>Test</strong></label>
-<form id="insert_expense_form">
-    <div data-role="fieldcontain">
-        <fieldset data-role="controlgroup">
-            <legend>Category</legend>
-            <label for="Category">Select Payment Type</label>
-            <select name="Category" id="Category">
-                <option value="Gas">Gas</option>
-                <option value="Food">Food</option>
-                <option value="Online_Shopping">Online Shopping</option>
-                <option value="Bill_Pay">Bill Pay</option>
-                <option value="Misc">Misc</option>
-            </select>
-        </fieldset>
+@*<a href="/Home/About" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="pop">Open dialog</a>*@
+<div data-role="header" data-position="inline">
+    <h1>Insert Expenses</h1>
+</div>
+<div data-role="content" data-theme="a">
+    <label id="current_expense_info"><strong>Test</strong></label>
+    <form id="insert_expense_form">
+        <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+                <legend>Category</legend>
+                <label for="Category">Select Payment Type</label>
+                <select name="Category" id="Category">
+                    <option value="Gas">Gas</option>
+                    <option value="Food">Food</option>
+                    <option value="Online_Shopping">Online Shopping</option>
+                    <option value="Bill_Pay">Bill Pay</option>
+                    <option value="Misc">Misc</option>
+                </select>
+            </fieldset>
 
-        <fieldset data-role="controlgroup">
-            <legend>Payment Type:</legend>
-            <label for="PaymentType">Select Payment Type</label>
-            <select name="PaymentType" id="PaymentType">
-                <option value="AE">American Express</option>
-                <option value="DSCVR">Discover</option>
-                <option value="CHASEVISA">Chase VISA</option>
-            </select>
-        </fieldset>
+            <fieldset data-role="controlgroup">
+                <legend>Payment Type:</legend>
+                <label for="PaymentType">Select Payment Type</label>
+                <select name="PaymentType" id="PaymentType">
+                    <option value="AE">American Express</option>
+                    <option value="DSCVR">Discover</option>
+                    <option value="CHASEVISA">Chase VISA</option>
+                </select>
+            </fieldset>
 
-        <label for="Amount">Amount </label>
-        <input type="number" data-clear-btn="false" name="Amount" id="Amount" value="">
+            <label for="Amount">Amount </label>
+            <input type="number" data-clear-btn="false" name="Amount" id="Amount" value="">
 
-        <label for="Notes">Notes:</label>
-        <textarea name="Notes" id="Notes"></textarea>
+            <label for="Notes">Notes:</label>
+            <textarea name="Notes" id="Notes"></textarea>
 
-        <label for="EntryDate">Datetime:</label>
-        <input type="datetime" data-clear-btn="true" name="EntryDate" id="EntryDate" value="@DateTime.Now">
+            <label for="EntryDate">Datetime:</label>
+            <input type="datetime" data-clear-btn="true" name="EntryDate" id="EntryDate" value="@DateTime.Now">
 
-        <label for="Receipt_PIC">Upload Receipt</label>
-        @*<input type="file" data-clear-btn="false" name="upload_receipt" id="upload_receipt" value="">*@
-        <input type="file" id="file_upload" name="file_upload" accept="image/*;capture=camera" onchange="getReceiptPic();"/>
-        <input type="hidden" id="Receipt_PIC" name="Receipt_PIC" value=""/>
-    </div>
-    <div data-role="fieldcontain">
-        <div class="ui-input-btn ui-btn ui-corner-all ui-shadow">
-            Submit
-            <input type="button" data-enhanced="true" value="SUBMIT" onclick="submit_insert_expense();">
+            <label for="Receipt_PIC">Upload Receipt</label>
+            @*<input type="file" data-clear-btn="false" name="upload_receipt" id="upload_receipt" value="">*@
+            <input type="file" id="file_upload" name="file_upload" accept="image/*;capture=camera" onchange="getReceiptPic();" />
+            <input type="hidden" id="Receipt_PIC" name="Receipt_PIC" value="" />
         </div>
-    </div>
-</form>
+        <div data-role="fieldcontain">
+            <div class="ui-input-btn ui-btn ui-corner-all ui-shadow">
+                Submit
+                <input type="button" data-enhanced="true" value="SUBMIT" onclick="submit_insert_expense();">
+            </div>
+        </div>
+    </form>
+</div>
 @section Scripts{
-<script src="~/Scripts/index.js"></script>
+    <script src="~/Scripts/index.js"></script>
 }
