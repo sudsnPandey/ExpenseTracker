@@ -13,7 +13,17 @@ var getSpendings = function () {
         async: true,
         success: function (data) {
             var expense = JSON.parse(data);
-            $("#current_expense_info").text("AE = $ "+expense.AE+"  DSCVR = $ "+expense.DSCVR+"  VISA = $ "+expense.CHASEVISA);
+            //$("#current_expense_info").html("<strong>AE</strong>  <p style=\"color:blue;\">$"+expense.AE+"</p>  <strong>DSCVR</strong> $"+expense.DSCVR+"  <strong>VISA</strong>  $"+expense.CHASEVISA);
+            $("#current_expense_info").html(
+                "<table style=\"width:100%;font-size:.7em;color:#a0a0a0\">" +
+                "<thead>" +
+                        "<tr><th>AE</th><th>DSCVR</th><th>VISA</th></tr>"+
+                "</thead>" +
+                "<tbody style=\"text-align:center;\">" +
+                        "<tr><td>$"+expense.AE+"</td><td>$"+expense.DSCVR+"</td><td>$"+expense.CHASEVISA+"</td></tr>"+
+                "</tbody>"+
+                "</table>"
+            );
         }, error: function (xhr, status, error) {
             console.log(error);
         }

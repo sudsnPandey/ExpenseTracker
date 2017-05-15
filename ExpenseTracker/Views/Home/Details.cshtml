@@ -1,0 +1,28 @@
+﻿@model List<ExpenseTracker.Models.ExpenseModel>
+<style>
+    .ui-header .ui-title, .ui-footer .ui-title {
+        margin: 0%;
+    }
+</style>
+<div data-role="header" data-position="inline">
+    <h1>@ViewData["Title"]</h1>
+</div>
+<div data-role="content" data-theme="a">
+    <table data-role="table" data-mode="columntoggle" id="expense-table">
+        <thead>
+        <th>Category</th>
+        <th>Amount</th>
+        <th data-priority="1">Notes</th>
+        <th data-priority="2">EntryDate</th>
+        </thead>
+        @foreach (var expense in Model)
+        {
+            <tr>
+                <td>@expense.Category</td>
+                <td class="pull-right">$@expense.Amount</td>
+                <td>@expense.Notes</td>
+                <td>@expense.EntryDate</td>
+            </tr>
+        }
+    </table>
+</div>

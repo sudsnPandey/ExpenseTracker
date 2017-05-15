@@ -10027,10 +10027,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\users\\sudsnnn\\documents\\visual studio 2017\\Projects\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj",
+      "projectUniqueName": "C:\\Users\\sudsnnn\\Documents\\Visual Studio 2017\\Projects\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj",
       "projectName": "ExpenseTracker",
-      "projectPath": "c:\\users\\sudsnnn\\documents\\visual studio 2017\\Projects\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj",
-      "outputPath": "c:\\users\\sudsnnn\\documents\\visual studio 2017\\Projects\\ExpenseTracker\\ExpenseTracker\\obj\\",
+      "projectPath": "C:\\Users\\sudsnnn\\Documents\\Visual Studio 2017\\Projects\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj",
+      "outputPath": "C:\\Users\\sudsnnn\\Documents\\Visual Studio 2017\\Projects\\ExpenseTracker\\ExpenseTracker\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

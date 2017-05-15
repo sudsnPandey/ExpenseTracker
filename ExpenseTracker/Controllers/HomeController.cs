@@ -34,11 +34,20 @@ namespace ExpenseTracker.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Details(string payment_type)
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
+            ViewData["Title"] = payment_type + " - Expenses";
+            var field_filter = Builders<ExpenseModel>.Projection.Include(p => p.Category)
+                                                                    .Include(p => p.Amount)
+                                                                    .Include(p => p.Notes)
+                                                                    .Include(p => p.EntryDate);
+            var expenses = Expenses.Find(Builders<ExpenseModel>.Filter.Eq(e => e.PaymentType, payment_type)).ToListAsync().Result;
+            //remove images from expenses
+            foreach(var e in expenses)
+            {
+                e.Receipt_PIC = null;
+            }
+            return View(expenses);
         }
 
         public IActionResult Contact()
@@ -59,12 +68,14 @@ namespace ExpenseTracker.Controllers
         {
             try
             {
-                Expenses.InsertOneAsync(em);
-                return RedirectToAction("Index");
+                Expenses.InsertOneAsync(em).Wait();
+                //return RedirectToAction("Index");
+                return Json(true);
             }
             catch
             {
-                return RedirectToAction("Error");
+                //return RedirectToAction("Error");
+                return Json(false);
             }
         }
         #endregion
