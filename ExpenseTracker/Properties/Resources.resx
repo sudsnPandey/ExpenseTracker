@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="mongoDBConnectionString" xml:space="preserve">
-    <value>mongodb://72.182.202.62</value>
+    <value>mongodb://sudsnnn:Hello123@ds149221.mlab.com:49221/expenses</value>
   </data>
   <data name="mongoDBDatabaseName" xml:space="preserve">
     <value>expenses</value>

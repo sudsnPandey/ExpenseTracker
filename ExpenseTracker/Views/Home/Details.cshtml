@@ -16,18 +16,20 @@
         <th>Notes</th>
         <th data-priority="1">EntryDate</th>
         </thead>
+        @{var total = 0.00;}
         @foreach (var expense in Model)
         {
             <tr>
                 <td>@expense.Category</td>
                 <td class="pull-right">$@expense.Amount</td>
+                @{total += expense.Amount;}
                 <td>@expense.Notes</td>
                 <td>@expense.EntryDate</td>
             </tr>
         }
         <tr>
             <td><strong>Total</strong></td>
-            <td><strong>20.22</strong></td>
+            <td><strong>@total</strong></td>
             <td></td>
             <td></td>
         </tr>

@@ -24,6 +24,7 @@ var getSpendings = function () {
                 "</tbody>" +
                 "</table>"
             );
+            $("#total_till_now").html("Total : $" + (parseFloat(expense.AE) + parseFloat(expense.DSCVR) + parseFloat(expense.CHASEVISA)));
         }, error: function (xhr, status, error) {
             console.log(error);
         }

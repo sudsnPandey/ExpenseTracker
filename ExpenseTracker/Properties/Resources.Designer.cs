@@ -62,7 +62,7 @@ namespace ExpenseTracker.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to mongodb://72.182.202.62.
+        ///   Looks up a localized string similar to mongodb://sudsnnn:Hello123@ds149221.mlab.com:49221/expenses.
         /// </summary>
         internal static string mongoDBConnectionString {
             get {

@@ -5,6 +5,7 @@
     }
 </style>
 <div data-role="header" data-position="inline">
+    <a href="/" id="current" data-icon="home" data-iconpos="notext">Home</a> 
     <h1>@ViewData["Title"]</h1>
 </div>
 <div data-role="content" data-theme="a">
@@ -12,17 +13,25 @@
         <thead>
         <th>Category</th>
         <th>Amount</th>
-        <th data-priority="1">Notes</th>
-        <th data-priority="2">EntryDate</th>
+        <th>Notes</th>
+        <th data-priority="1">EntryDate</th>
         </thead>
+        @{var total = 0.00;}
         @foreach (var expense in Model)
         {
             <tr>
                 <td>@expense.Category</td>
                 <td class="pull-right">$@expense.Amount</td>
+                @{total += expense.Amount;}
                 <td>@expense.Notes</td>
                 <td>@expense.EntryDate</td>
             </tr>
         }
+        <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>@total</strong></td>
+            <td></td>
+            <td></td>
+        </tr>
     </table>
 </div>

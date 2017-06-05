@@ -12,23 +12,15 @@ namespace ExpenseTracker.Controllers
 {
     public class HomeController : Controller
     {
-        //private CwMongo _mongo;
-
-        //private IMongoCollection<ExpenseModel> Expenses
-        //{
-        //    get
-        //    {
-        //        return
-        //            _mongo.CwMongoClient.GetDatabase(CwMongo.DatabaseName)
-        //            .GetCollection<ExpenseModel>("expenses");
-        //    }
-        //}
+        
         IMongoCollection<ExpenseModel> Expenses;
         public HomeController()
         {
             var client = new MongoClient(Properties.Resources.ResourceManager.GetString("mongoDBConnectionString"));
             Expenses = client.GetDatabase("expenses").GetCollection<ExpenseModel>("expenses");
+
         }
+
         public IActionResult Index()
         {
             return View();

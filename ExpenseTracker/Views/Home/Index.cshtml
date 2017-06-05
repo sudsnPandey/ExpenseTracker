@@ -15,11 +15,22 @@
     }
 </style>
 @*<a href="/Home/About" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="pop">Open dialog</a>*@
+
 <div data-role="header" data-position="inline">
     <h1>Insert Expenses</h1>
+    <a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="fade" data-icon="gear" data-theme="e" class="ui-btn-right">Menu</a>
+    <div data-role="popup" id="popupMenu" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+            <li><a href="#">Quick View</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Auto Pay Setup</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>    
 </div>
 <div data-role="content" data-theme="a">
     <label id="current_expense_info">Loading...</label>
+    <label id="total_till_now" style="text-align:right;font-size:10px;font-weight:bold;color:darkred;"></label>
     <form id="insert_expense_form">
         <div data-role="fieldcontain">
             <fieldset data-role="controlgroup">
